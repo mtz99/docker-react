@@ -4,10 +4,12 @@ WORKDIR '/app'
 
 COPY package.json .
 
+npm install -g npm@latest
+
+rm -rf node_modules
+
 RUN npm install
 
 COPY . .
-
-chmod +x node_modules/.bin/react-scripts
 
 CMD ["npm", "run", "start"]
