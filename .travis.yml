@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t zhanmtz/docker-react -f Dockerfile.dev .
+  - docker build -t zhanmtz/testap -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true zhanmtz/docker-react npm run test
+  - docker run -e CI=true zhanmtz/testap npm run test
