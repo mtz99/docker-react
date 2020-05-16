@@ -4,10 +4,6 @@ WORKDIR '/app'
 
 COPY package.json .
 
-npm install -g npm@latest
-
-rm -rf node_modules
-
 RUN npm install
 
 COPY . .
